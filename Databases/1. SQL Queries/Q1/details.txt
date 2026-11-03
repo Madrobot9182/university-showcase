@@ -1,0 +1,2 @@
+agent: NA
+Details: We link borrowed books to waitlist by book_id, and link members email to borrowings members (also email). Distinct to remove duplicates

@@ -1,0 +1,4 @@
+agent: NA
+Details: I joined books and borrowings, then full join waitlists (to also consider books not waitlisted) all by book_id.
+
+Check if pyear <= 2015, and group by book_id to check if it was both borrowed at least once, and borrowed at least twice then waitlisted (0 if not in waitlisted)

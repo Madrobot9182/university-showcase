@@ -1,0 +1,6 @@
+agent: NA
+Details: I create the view, copying the column names from the lab description. I then full join the books, reviews, and waitlists table to consider books not review/waitlisted
+
+First 4 columns are self explanatory
+rating23 is a subquery that gets ratings with rdate='2023'
+reqcnt adds 2 subqueries that simply counts books that are reviewed + books waitlisted

@@ -1,0 +1,146 @@
+Enter the sql statements to create tables in this file.
+--------USER--BUYER--SELLER--------
+CREATE TABLE User
+(
+Name CHAR(20),
+DOB DATE,
+UID INTEGER,
+PRIMARY KEY (UID)
+);
+
+CREATE TABLE Buyer
+(
+UID INTEGER,
+Registeration_Date DATE,
+PRIMARY KEY (UID),
+FOREIGN KEY (UID) REFERENCES User
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Seller
+(
+UID INTEGER,
+Is_Active CHAR(3),
+PRIMARY KEY (UID),
+FOREIGN KEY (UID) REFERENCES User
+    ON DELETE CASCADE
+);
+
+------------------------------------
+
+
+--------------LISTING---------------
+CREATE TABLE Listing
+(
+LID INTEGER,
+Product_Name CHAR(25),
+PRIMARY KEY (LID)
+);
+
+CREATE TABLE Listing_Tags
+(
+LID INTEGER,
+Tag CHAR(30),
+PRIMARY KEY (LID, Tag),
+FOREIGN KEY (LID) REFERENCES Listing
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Listing_Owner
+(
+LID INTEGER,
+UID INTEGER NOT NULL,
+Product_Name CHAR(25),
+PRIMARY KEY (LID),
+FOREIGN KEY (UID) REFERENCES Seller
+    ON DELETE NO ACTION
+);
+
+CREATE TABLE Listing_Owner_Tags
+(
+LID INTEGER,
+Tag CHAR(30),
+PRIMARY KEY (LID, Tag),
+FOREIGN KEY (LID) REFERENCES Listing_Owner
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Saved_Listing
+(
+LID INTEGER,
+UID INTEGER,
+PRIMARY KEY (LID, UID),
+FOREIGN KEY (LID) REFERENCES Listing,
+FOREIGN KEY (UID) REFERENCES Buyer
+);
+------------------------------------
+
+
+--------TRANSACTION/PURCHASE--------
+CREATE TABLE Transaction
+(
+LID INTEGER,
+Product_Name CHAR(25),
+B_UID INTEGER,
+S_UID INTEGER,
+Is_Active CHAR(3),
+Registeration_Date DATE,
+Rate FLOAT,
+PRIMARY KEY (LID, B_UID, S_UID),
+FOREIGN KEY (LID) REFERENCES Listing,
+FOREIGN KEY (S_UID) REFERENCES Seller,
+FOREIGN KEY (B_UID) REFERENCES Buyer
+);
+
+CREATE TABLE Purchase
+(
+B_UID INTEGER,
+S_UID INTEGER,
+Is_Active CHAR(3),
+PRIMARY KEY (LID, B_UID, S_UID),
+FOREIGN KEY (S_UID) REFERENCES Seller,
+FOREIGN KEY (B_UID) REFERENCES Buyer,
+FOREIGN KEY (LID) REFERENCES Listing_Owner
+    ON DELETE CASCADE
+);
+------------------------------------
+
+
+--------------BOOKMARK--------------
+CREATE TABLE Booklist_Creates
+(
+Name CHAR(25),
+UID INTEGER NOT NULL,
+PRIMARY KEY (Name, UID),
+FOREIGH KEY (UID) REFERENCES Buyer
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Bookmarked_In
+(
+LID INTEGER,
+Product_Name CHAR(25),
+Name CHAR(25),
+FOREIGN KEY (LID) REFERENCES Listing,
+FOREIGN KEY (Name, UID) REFERENCES Booklist_Creates
+);
+------------------------------------
+
+
+--------------CONDITION-------------
+CREATE TABLE Condition
+(
+CID INTEGER,
+Details CHAR(120),
+PRIMARY KEY (CID)
+);
+
+CREATE TABLE Listing_With_Cond
+(
+LID INTEGER,
+Product_Name CHAR(25),
+CID INTEGER,
+PRIMARY KEY (LID),
+FOREIGN KEY (CID) REFERENCES Condition
+);
+------------------------------------

@@ -1,0 +1,4 @@
+agent: NA
+Details: I join book_view an borrowings by book_id, then members and borrowings by member/email to create the link
+Then I select emails where the associated rating > 3.5 and request count > average request count (through a subquery to get avg of reqcnt)
+DISTINCT to remove duplicates from earlier hoining

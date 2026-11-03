@@ -1,0 +1,189 @@
+drop table if exists reviews;
+drop table if exists penalties;
+drop table if exists borrowings;
+drop table if exists books;
+drop table if exists members;
+
+
+
+
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE members (
+    email CHAR(100),
+    passwd CHAR(100),
+    name CHAR(255) NOT NULL,
+    byear INTEGER,
+    faculty CHAR(100),
+    PRIMARY KEY (email)
+);
+
+CREATE TABLE books (
+    book_id INTEGER,
+    title CHAR(255),
+    author CHAR(150),
+    pyear INTEGER,
+    PRIMARY KEY (book_id)
+);
+
+CREATE TABLE borrowings(
+    bid INTEGER,
+    member CHAR(100) NOT NULL,
+    book_id INTEGER NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE,
+    PRIMARY KEY (bid),
+    FOREIGN KEY (member) REFERENCES members(email),
+    FOREIGN KEY (book_id) REFERENCES books(book_id)
+);
+
+
+CREATE TABLE penalties(
+    pid INTEGER,
+    bid INTEGER NOT NULL,
+    amount INTEGER NOT NULL,
+    paid_amount INTEGER,
+    PRIMARY KEY (pid),
+    FOREIGN KEY (bid) REFERENCES borrowings(bid)
+);
+
+
+CREATE TABLE reviews(
+    rid INTEGER,
+    book_id INTEGER NOT NULL,
+    member CHAR(100) NOT NULL,
+    rating INTEGER NOT NULL,
+    rtext CHAR(255),
+    rdate DATE,
+    PRIMARY KEY (rid),
+    FOREIGN KEY (member) REFERENCES members(email),
+    FOREIGN KEY (book_id) REFERENCES books(book_id)
+);
+
+-- Insert sample data into members table
+INSERT INTO members (email, passwd, name, byear, faculty) VALUES
+('user1@example.com', 'password1', 'John Doe', 1990, 'Science');
+
+INSERT INTO members (email, passwd, name, byear, faculty) VALUES
+('user2@example.com', 'password2', 'Jane Smith', 1985, 'Arts');
+
+INSERT INTO members (email, passwd, name, byear, faculty) VALUES
+('user3@example.com', 'password3', 'Alice Johnson', 1995, 'Engineering');
+
+INSERT INTO members (email, passwd, name, byear, faculty) VALUES
+('user4@example.com', 'password4', 'Bob Brown', 1980, 'Law');
+
+-- Insert sample data into books table
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(1, 'Book1', 'Author1', 2000);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(2, 'Book2', 'Author2', 2010);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(3, 'Book3', 'Author3', 1995);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(4, 'Book4', 'Author4', 2020);
+
+-- Insert sample data into borrowings table
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(1, 'user1@example.com', 1, '2023-01-01', '2023-01-15');
+
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(2, 'user2@example.com', 2, '2023-02-01', '2023-02-15');
+
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(3, 'user3@example.com', 3, '2023-03-01', '2023-03-15');
+
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(4, 'user4@example.com', 4, '2023-04-01', '2023-04-15');
+
+-- Insert sample data into penalties table
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(1, 1, 10.50, 5.00);
+
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(2, 2, 8.25, 8.25);
+
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(3, 3, 15.75, 0.00);
+
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(4, 4, 20.00, 20.00);
+
+-- Insert sample data into reviews table
+INSERT INTO reviews (rid, book_id, member, rating, rtext, rdate) VALUES
+(1, 1, 'user1@example.com', 4, 'Great book!', '2023-01-05');
+
+INSERT INTO reviews (rid, book_id, member, rating, rtext, rdate) VALUES
+(2, 2, 'user2@example.com', 5, 'Fantastic read!', '2023-02-10');
+
+INSERT INTO reviews (rid, book_id, member, rating, rtext, rdate) VALUES
+(3, 3, 'user3@example.com', 3, 'Average book.', '2023-03-20');
+
+INSERT INTO reviews (rid, book_id, member, rating, rtext, rdate) VALUES
+(4, 4, 'user4@example.com', 2, 'Disappointing.', '2023-04-25');
+
+-- Add more sample data into books table
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(5, 'Book5', 'Author1', 2015);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(6, 'Book6', 'Author1', 2005);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(7, 'Book7', 'Author2', 2018);
+
+-- Add more sample data into borrowings table
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(5, 'user1@example.com', 5, '2023-05-01', '2023-05-15');
+
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(6, 'user2@example.com', 6, '2023-06-01', '2023-06-15');
+
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(7, 'user2@example.com', 7, '2023-07-01', '2023-07-15');
+
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(8, 'user3@example.com', 5, '2023-08-01', '2023-08-15');
+
+-- Add more sample data into penalties table
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(5, 5, 12.00, 1.00);
+
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(6, 6, 7.50, 6.50);
+
+INSERT INTO penalties (pid, bid, amount, paid_amount) VALUES
+(7, 7, 10.00, 10.00);
+
+-- Add even moar reviews into review table
+INSERT INTO reviews (book_id, member, rating, rtext, rdate) 
+VALUES (6, 'user2@example.com', 4, 'Enjoyable read!', '2024-03-14');
+
+INSERT INTO reviews (book_id, member, rating, rtext, rdate) 
+VALUES (7, 'user2@example.com', 5, 'Absolutely loved it!', '2024-03-14');
+
+-- Insert sample data into books table for the new books
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(8, 'Book8', 'Author8', 2017);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(9, 'Book9', 'Author9', 2019);
+
+INSERT INTO books (book_id, title, author, pyear) VALUES
+(10, 'Book10', 'Author10', 2015);
+
+-- Add overdue borrowings for user2
+-- Book 8 borrowed more than 20 days ago
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(9, 'user2@example.com', 8, '2023-02-20', NULL);
+
+-- Book 9 borrowed more than 20 days ago
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(10, 'user2@example.com', 9, '2023-03-01', NULL);
+
+-- Book 10 borrowed more than 20 days ago
+INSERT INTO borrowings (bid, member, book_id, start_date, end_date) VALUES
+(11, 'user2@example.com', 10, '2023-03-10', NULL);

@@ -1,0 +1,4 @@
+agent: NA
+Details: First I made a penalty_cte for members to total penalities count.
+Then in the outer selection statement, I select the first two from the cte, then get the paid_penalty count and amount from the second query.
+I join borrowings b and penalty_cte by member. Then I left join penlities (to account for zero paid penalities), joining on bid and if the penalty was paid in full (paid more than what was owed)

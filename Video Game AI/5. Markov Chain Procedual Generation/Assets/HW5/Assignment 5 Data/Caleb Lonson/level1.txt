@@ -1,0 +1,12 @@
+P='X'''RP''
+To...X....X
+TL..XXX..XX
+T._..-..XX.
+T_..X..XX..
+T..XXX]...X
+T_..-...XX.
+T..X..XX...
+T_...XX..XX
+T..XX...XX.
+T.[.X-X]...
+L_....._._.

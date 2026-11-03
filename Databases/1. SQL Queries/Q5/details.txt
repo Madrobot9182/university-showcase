@@ -1,0 +1,2 @@
+agent: NA
+Details: I join books and reviews by book_id, and then group by book_id. That lets me count how many reviews each book has and I return those with count > 2. Limit output to top 3 results

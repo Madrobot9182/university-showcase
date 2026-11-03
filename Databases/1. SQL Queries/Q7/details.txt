@@ -1,0 +1,4 @@
+agent: NA
+Details: In book_cte I group books and borrowings by book_id, and select all revelent info.
+I also rank() by # of times borrowed in descending order (most to least) to find the top books
+Finally I selected the book info and only took those with ranks <= 3 -- whihc also accounts for ties.

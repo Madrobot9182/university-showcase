@@ -1,0 +1,3 @@
+agent: NA
+Details: I first linked borrowings and waitlist by book_id.
+I then added the date constant using the difference of (end - start) julianday >14 days, and filter out any books with waitlist priority >5

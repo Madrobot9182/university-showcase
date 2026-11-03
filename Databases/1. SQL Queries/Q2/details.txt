@@ -1,0 +1,10 @@
+agent: NA
+Details: We needed the tables members to check if their in CS, borrowings to check who's borrowing what book, and books to check what the author is.
+
+--Obviously to check the two conditions, lower() for case insensitivity--
+members.faculty = "CS"
+(lower(books.author) = "john" OR lower(books.author) = "marry")
+
+--Join conditions to connect members to their borrowed books--
+members.email = borrowings.member --join by email
+borrowings.book_id = books.book_id -- join by book_id

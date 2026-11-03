@@ -1,0 +1,51 @@
+# Intersting lines
+### Bates
+- *CHI:	dis [: this] one and dis [: this] one and dis [: this] one .
+- *CHI:	there [*] one .
+- *CHI:	xxx .
+- *CHI:	&-um .
+
+### Bernstein
+- *MOT:	or +"/.
+- *MOT:	+" how (a)bout a donut .
+- *MOT:	says I'm hi:ding ! 1043282_1046881
+
+### Bloom
+- *LOI:	let's take these [= men figures] for a ride .
+- *CHI:	0 .
+- *CHI:	xxx .
+
+### Clark
+- *CHI:	no (.) yeah +...
+- *INV:	what's the dog doing ?
+- *CHI:	rowf@o ruff@o .
+- *CHI:	I want a green (.) I [?] (w)an(t) in a green (.) I can't get out .
+- *CHI:	ya [//] ya [//] you drum when [//] when dere's [: there's] a [//] ve [//] when dere's [: there's] a [//] &-um [//] when dere's [: there's] a [//] a parade .
+- *CHI:	dat's [: that's] duh [: the] candied one !
+- *INV:	+" the rocket...
+
+### Haggerty
+- *CHI:	has Margaret's any sugar in ?
+
+### Gleason
+- *FAT:	xxx [=? never] . 111065_111832
+- *CHI:	no: +/. 113016_113330
+- *MOT:	0 [=! coughing] . 1799270_1804332
+- *FAT:	<Usher xxx> [<] . 2322883_2325600
+
+### Morisset
+- *MOT:	come on (.) let's go get some +...
+- *CHI:	xxx [>] Mommy ?
+- *MOT:	xxx [<] .
+- *MOT:	there's the xxx [=! whisper] .
+- *CHI:	0 [= shakes head no] .
+
+### Sachs
+- *MOT:	are you shaking it ? 70827_73262 <- https://www.fileformat.info/info/unicode/char/0015/index.htm
+- *MOT:	that's a handkerchief . 1866425_1868025
+
+
+### Warren
+- *MOT:	thank_you .
+- *MOT:	let's look at this book let's look at this book .
+- *CHI:	kee [: kitty] .

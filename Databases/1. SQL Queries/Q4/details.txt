@@ -1,0 +1,2 @@
+agent: NA
+Details: I full joined on borrowings so the table will include books that have never been borrowed. Check whether pyear > 2001, and group by book_id to count how many times the book was borrowed

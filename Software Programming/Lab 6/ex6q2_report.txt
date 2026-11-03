@@ -1,0 +1,21 @@
+Behold: Bogo sort! An extremely inefficient but funny random sort algorithm that's only funny if I was the only person who did this ;)
+Otherwise the joke becomes repetitive and stale, ruining the comedy facter. Also I swear this work it just takes literally forever and I'm not exergerating
+Tldr: if the list isn't sorted, we suffle the list randomly and hope its sorted. Else repeat infinity until it becomes sorts
+ALSO TECHNICALLY BOGO HAVE TO DO COMPARISONS TO CHECK IF THE ARRAY IS SORTED SO THIS TECHICALLY COUNTS AS A COMPARISON ARRAY pls dont dock points my epic and cool TA even if it physically can't pass the check file lol（￣ε￣ʃƪ）<= you
+
+Best case: O(N) the list is already sorted!!!! (ﾉ◕ヮ◕)ﾉ*:Amazing!･ﾟ✧
+Worst case: O(inf) aka unbounded aka there is the non-zero possibility it could just run infinity (；⌣̀_⌣́)
+On average it should take around O(n^n). At least in theory, but as I'm typing this I've been sorting this 20 length array for an hour now so who really know ;)
+- (I promise this algorithm "works", as it can sort smaller array n < 10ish before the inevatble heat death of the universe).
+
+Advantages: By nature of this algorithm, let's say your running the sorting program, but suddently you gotta leave and have to stop it, just in case it becomes sentient and turns the house into a titan and turns the world into a battle royale. You can alwyas just stop the program, do whatever it is you need to do, and come back later to restart the program. Rest easy knowing virtually no progress was lost and your still running at optimal efficiency!! (＾＾)b
+
+Disadvantages: It could just never sort the array :/ (a minor setback really). At least my PC is now a nice and cosy heater to warm up my basenment ;)
+
+Now, to pick bogo over quicksort or selection sort depends on what you wanna do:
+- If your job was billed by the hour and invovles sorting, charge your clients by the hour for the easy (near) infinite money glitch
+- If you wanted to (hypothetically, not endoursing but yknow... just educating~) create a ram bomb that basically murders any PC it comes into contact with. Try sorting various databases with Bogo sort. It'll still run faster than Beartracks ;)
+- I promise this is VERY "hypothetically", VERY not not "NOT endoursing" but yknow... REALLY "just educating", if someone couldn't figure out the soultion to a problem and made it run infinitely, hence it could never be officially marked, and the markers, alpha-chad you =>（￣ε￣ʃƪ), might feel like just giving them (and definitely not me), full marks anyways. Since this algorithm could eventually resolve, we can agree that this is a valid solution outside the context of time requirenments under the Age of the Universe (so at least an hour).
+
+Thank you for listening, anyways my second choice was Stalin sort and potentially even some other quality sorts in the comments - https://www.reddit.com/r/programminghumor/comments/ddmifm/stalin_sort/
+(Couldn't believe I found Reddit funny but here I am)

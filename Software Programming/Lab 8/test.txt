@@ -1,0 +1,41 @@
+const var fqkcvjpbdi = []!!
+fqkcvjpbdi[48630.1124] = 847928795!
+fqkcvjpbdi[131505.2414] = 2024093650!
+fqkcvjpbdi[2] = 1237622880!
+fqkcvjpbdi[76.1536] = 1969046184!
+fqkcvjpbdi[91.8926] = 2141722459!
+fqkcvjpbdi[11.1312] = 1366196855!
+fqkcvjpbdi[19.3549] = 1427123648!
+fqkcvjpbdi[3] = 89128722!
+print(fqkcvjpbdi)!
+fqkcvjpbdi[1] = 897550776!
+print(fqkcvjpbdi)!
+fqkcvjpbdi[6] = 1624850082!
+fqkcvjpbdi[728670.7924] = 1259345565!
+fqkcvjpbdi[70.8493] = 90079595!
+fqkcvjpbdi[79.2795] = 327416312!
+fqkcvjpbdi[326292.5709] = 1948533164!
+fqkcvjpbdi[418202.0875] = 151939736!
+print(fqkcvjpbdi)!
+fqkcvjpbdi[826668.6003] = 1352888274!
+fqkcvjpbdi[4] = 383961110!
+fqkcvjpbdi[408744.1767] = 846514956!
+fqkcvjpbdi[71.5412] = 1957809385!
+fqkcvjpbdi[83.3038] = 1213612286!
+fqkcvjpbdi[70624.0566] = 1678898602!
+fqkcvjpbdi[57.9532] = 771651584!
+fqkcvjpbdi[60.9693] = 1709853743!
+fqkcvjpbdi[532068.662] = 1332019082!
+fqkcvjpbdi[226071.493] = 1490143991!
+fqkcvjpbdi[648168.4842] = 636524558!
+fqkcvjpbdi[8] = 640619887!
+fqkcvjpbdi[4] = 1643881891!
+fqkcvjpbdi[24027.8286] = 362028044!
+fqkcvjpbdi[3] = 1415999380!
+print(fqkcvjpbdi)!
+fqkcvjpbdi[0] = 1286165705!
+print(fqkcvjpbdi)!
+fqkcvjpbdi[7] = 1021013596!
+print(fqkcvjpbdi)!
+fqkcvjpbdi[75.3416] = 302597673!
+fqkcvjpbdi[809097.3048] = 282018814!
